@@ -190,6 +190,6 @@ for ind, record in enumerate(X):
     predicted_labels_final.append(readl_digit[current_max.index(max(current_max))])
 
     
-np.savetxt('final_model.txt', (optimal_weights_final )) 
+np.savetxt(sys.argv[3], (optimal_weights_final )) 
 cl = classification_report(Y, predicted_labels_final)
 print cl 
